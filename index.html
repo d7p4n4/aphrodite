@@ -1,0 +1,732 @@
+<!doctype html> 
+<html lang="en">
+  <head>
+    <!-- Required meta tags --> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <!-- font fam -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
+    
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:900|Signika" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>Practice page</title> 
+  </head>
+  
+  <body>
+        
+    <!-- main styles -->
+
+    <style>
+      
+      html {
+        font-size: 11.5px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      @media (min-width: 420px) {
+        html {
+          font-size: 13px;
+        }
+      }
+      
+      @media (min-width: 620px) {
+        html {
+          font-size: 15px;
+        }
+      }
+      
+      @media (min-width: 980px) {
+        html {
+          font-size: 17.5px;
+        }
+      }
+      
+      @media (min-width: 1200px) {
+        html {
+          font-size: 20px;
+        }
+      }
+    
+     a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      a:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      body {
+        width: 100%;
+      }
+    </style>
+    
+    <style>
+      header {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .row-header {
+        background-image: url(assets/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        width: 100%;
+        height: 30rem;
+      }
+      
+      @media (max-width: 768px) {
+        .row-header {
+          display: none;
+        }
+      }
+      
+      .row-header-text {
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      
+      @media (max-width: 768px) {
+        .row-header-text {
+          position: static;
+          background-color: rgb(26,28,33);
+        }
+      }
+      
+      .logo-border {
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        background-color: transparent;
+        left: calc(50% - 1rem);
+      }
+      
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      .logo-top,
+      .logo-right,
+      .logo-bottom,
+      .logo-left {
+        stroke-width: .5rem;
+        stroke: rgba(135,135,135,1);
+        fill: none;
+      }
+      
+      .main-title {
+        font-family: "great vibes";
+        font-size: 3rem;
+        color: rgba(240,240,240,1);
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        
+      }
+      
+      .main-little-title {
+        font-family: roboto;
+        font-size: .7rem;
+        padding: 0;
+        margin: 0;
+        line-height: 1rem;
+        text-align: center;
+        color: rgb(240,240,240);
+        padding-left: 2.5rem;
+        margin-top: -1rem;
+      }
+      
+      .col-red {
+        height: auto;
+        width: 100%;
+        background-color: rgb(186,52,70);
+        padding: 2rem 0 2rem 0;
+      }
+      
+      .red-text {
+        text-align: center;
+        font-size: .65rem;
+        font-family: signika;
+        color: rgb(210,210,210);
+        margin-bottom: .5rem;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        height: 2rem;
+        border-bottom: .05rem solid rgb(240,240,240);
+
+      }
+      
+      input::placeholder {
+        text-align: center;
+        font-size: .65rem;
+        font-family: signika;
+        color: rgb(240,240,240);
+      }
+      
+      input:focus {
+        border: none;
+      }
+      
+      .red-title {
+        font-family: roboto;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 1.75rem;
+        color: rgb(240,240,240);
+        margin-bottom: 2rem;
+      }
+      
+      .first-btn {
+        background-color: rgb(240,240,240);
+        width: 100%;
+        height: 2.5rem;
+        color: rgb(186,52,70);
+        font-family: roboto;
+        text-align: center;
+        font-size: .65rem;
+        padding-top: .4rem;
+        margin: 2rem 0 0 0;
+        border-radius: .2rem;
+        line-height: 1.5rem;
+        box-sizing: border-box;
+        border: .1rem solid rgb(240,240,240);
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+      }
+      
+      .first-btn:hover {
+        background-color: transparent;
+        border: .1rem solid rgb(240,240,240);
+        color: rgb(240,240,240);
+        box-sizing: border-box;
+        box-shadow: inset 0 0 25px rgba(0,0,0,.25);
+        padding-top: .4rem;
+        cursor: pointer;
+      }
+      
+      
+    </style>
+    
+    <header>
+        
+      <div class="row row-header justify-content-end pt-3 pb-0 pr-md-5 pr-md-0 m-0">
+        <div class="col-12 col-bcg"></div>      
+      </div>
+      
+      <div class="row row-header-text pt-3 pb-0 p-0 m-0">
+        <div class="col-12 col-md-5">
+          <div class="row justify-content-end mt-4">
+            <div class="col-12 col-md-7 logo-bcg mr-md-3">
+              <div class="logo">
+                <svg class="logo-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                  <line class="logo-top" x1="1rem" y1="0"></line>
+                  <line class="logo-left" x1="0" y1="2rem"></line>
+                  <line class="logo-right" x1="2rem" y1="2rem" x2="2rem" y2="1rem"></line>
+                  <line class="logo-bottom" x1="0" x2="2rem" y1="2rem" y2="2rem"></line>
+                </svg>
+              </div>
+              <p class="main-title">Aphrodite</p>
+              <p class="main-little-title">BEAUTY SCHOOL</p>
+            </div>
+            <div class="col-12 mt-5 m-0 col-red">
+              <div class="row justify-content-end pr-5 pl-5 p-md-0">
+                <div class="col-12 col-md-7 pr-5 pl-5 pl-md-0">
+                  <p class="red-title">WE DO MORE THAN JUST CREATE BEAUTY</p>
+                  <form action="" method="post">
+                    <input type="text" class="red-text" placeholder="Your Name">
+                    <input type="text" class="red-text" placeholder="City or ZIP">
+                    <input type="text" class="red-text" placeholder="E-mail">
+                  </form>
+                  <div class="first-btn">GET STARTED NOW!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </header>
+    
+    <style>
+      .wrapper-1 {
+        width: 100%;
+        padding: 7rem 0 3rem 0;
+        background-color: rgb(240,240,240);
+      }
+      
+      .col-svg {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: relative;
+        height: auto;
+      }
+      
+      .container-top,
+      .container-left,
+      .container-bottom,
+      .container-right {
+        stroke: rgb(135,135,135);
+        stroke-width: .2rem;
+        fill: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .container-top-red {
+        stroke: rgb(186,52,70);
+        stroke-width: .4rem;
+        fill:none;
+      }
+      
+      .container-title {
+        font-family: "great vibes";
+        font-size: 2rem;
+        color: rgb(135,135,135);
+        position: absolute;
+        top: -1.5rem;
+        left: 35%;
+      }
+      
+      .container-straight-title,
+      .container-straight-little-title, 
+      .container-straight-text,
+      .straight-num {
+        transform: scaleX(-1);
+      }
+      
+      .container-little-title {
+        color: black;
+        font-family: roboto;
+        font-size: 1.3rem;
+        position: relative;
+        margin: 2.5rem 35% 1.5rem 2rem;
+        line-height: 1.5rem;
+      }
+      
+      .container-text {
+        font-family: signika;
+        font-size: .65rem;
+        color: rgb(135,135,135);
+        line-height: .95rem;
+        font-weight: bold;
+        position: relative;
+        margin: 0 35% 1.5rem 2rem;
+      }
+      
+      .image-1 {
+        box-shadow: -10px 10px 15px rgb(135,135,135);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: -5rem;
+        top: -1.5rem;
+      }
+      
+      .image-2 {
+        box-shadow: 10px 10px 15px rgb(135,135,135);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        right: -5rem;
+        top: -1.5rem;
+        z-index: 5;
+        transform: scaleX(-1);
+      }
+      
+      .red-border {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: none;
+        border-right: .2rem solid rgb(186,52,70);
+        border-bottom: .2rem solid rgb(186,52,70);
+        position: relative;
+        top: 3rem;
+        right: -50%;
+      }
+      
+      .red-border-mirror {
+        width: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        border: none;
+        border-left: .2rem solid rgb(186,52,70);
+        border-bottom: .2rem solid rgb(186,52,70);
+        top: 3rem;
+        left: 5rem;
+      }
+      
+      .num {
+        color: black;
+        font-family: roboto;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        left: 2.5rem;
+        position: relative;
+        font-weight: bold;
+      }
+      
+      .num-mirror {
+        color: black;
+        font-family: roboto;
+        font-size: 1.3rem;
+        margin-left: 2.5rem;
+        position: relative;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+      }
+      
+      .row-mirror {
+        margin-top: 5rem;
+      }
+      
+      .container-mirror-title {
+        left: inherit;
+        right: 35%;
+      }
+      
+      .container-mirror {
+        margin: 0 2rem 1.5rem 35%;
+      }
+      
+      .row-mirror-2 {
+        transform: scaleX(-1);
+      }
+
+    </style>
+    
+    <div class="wrapper-1">
+
+      <div class="row justify-content-center ml-5 row-mirror row-mirror-2 mb-5">
+        <div class="col-5 col-md-3">
+          <img class="img-fluid image-2" alt="" src="assets/pic-1.jpg">
+          <div class="red-border-mirror">
+            <p class="num straight-num">01.</p>
+          </div>
+        </div>
+        <div class="col-7 col-md-5 col-svg">
+          <p class="container-title container-mirror-title container-straight-title">About Us</p>
+          <p class="container-little-title container-mirror container-straight-little-title" style="margin-top: 2.5rem;">SUCCEED IN THE BEAUTY WORLD</p>
+          <p class="container-text pb-2 container-mirror container-straight-text">Autem possit no sit, ius augue aeque admodum et. Summo nobis legimus at eos. Vero mollis iudicabit cum ex, eam id semper accusata. Duo ad integre insolens. Assum delicata definitionem ius cu, labitur salutandi cum te. No nam porro dolorum eligendi, ea modus etiam sea, vel te probo dicunt inciderint.</p>
+          <p class="container-text pb-2 container-mirror container-straight-text">Lorem ipsum dolor sit amet, primis latine urbanitas usu ei. Sed in dolorum intellegam, has ei nobis gubergren expetendis. No ubique facilis vim, congue molestiae euripidis at eam, patrioque splendide pro cu. In vide tantas suavitate sed, ea quo dicat civibus.</p>
+            <svg class="container-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="container-top" x1="80%" x2="100%" y1="0"></line>
+              <line class="container-top-red" x1="80%" x2="70%" y1="0"></line>
+              <line class="container-left" x1="0" y1="0" y2="100%"></line>
+              <line class="container-right" x1="100%" y1="100%" x2="100%" y2="0"></line>
+              <line class="container-bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+            </svg>
+        </div>
+      </div>
+      
+      <div class="row mt-3 mb-3"></div>
+      
+      <div class="row justify-content-center mr-5 row-mirror mb-5">
+        <div class="col-5 col-md-3">
+          <img class="img-fluid image-2" alt="" src="assets/pic-2.jpg">
+          <div class="red-border-mirror">
+            <p class="num-mirror">02.</p>
+          </div>
+        </div>
+        <div class="col-7 col-md-5 col-svg">
+          <p class="container-title container-mirror-title">Useful Info</p>
+          <p class="container-little-title container-mirror" style="margin-top: 2.5rem;">SUCCEED IN THE BEAUTY WORLD</p>
+          <p class="container-text pb-2 container-mirror">Autem possit no sit, ius augue aeque admodum et. Summo nobis legimus at eos. Vero mollis iudicabit cum ex, eam id semper accusata. Duo ad integre insolens. Assum delicata definitionem ius cu, labitur salutandi cum te. No nam porro dolorum eligendi, ea modus etiam sea, vel te probo dicunt inciderint.</p>
+            <svg class="container-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="container-top" x1="80%" x2="100%" y1="0"></line>
+              <line class="container-top-red" x1="80%" x2="70%" y1="0"></line>
+              <line class="container-left" x1="0" y1="0" y2="100%"></line>
+              <line class="container-right" x1="100%" y1="100%" x2="100%" y2="0"></line>
+              <line class="container-bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+            </svg>
+        </div>
+      </div>
+    
+    
+    </div>
+    
+    <style>
+      .pic3-background {
+        background-image: url(assets/pic-4.jpg);
+        background-size: cover;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+      }
+      
+      .purple-bcg {
+        background-color: rgb(63,56,83);
+        padding: 5rem 0 5rem 0;
+      }
+      
+      .purple-little-title {
+        color: rgb(240,240,240);
+        font-family: roboto;
+        font-size: .65rem;
+        line-height: .95rem;
+        text-align: center;
+      }
+      
+      .purple-title {
+        color: rgb(240,240,240);
+        font-family: roboto;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        letter-spacing: .15rem;
+        font-weight: 100;
+      }
+      
+      .sec-btn {
+        height: 2.5rem;
+        width: 5rem;
+        padding: 0.4rem 1rem;
+        border: .1rem solid rgb(240,240,240);
+        border-radius: .2rem;
+        color: rgb(240,240,240);
+        text-align: center;
+        font-family: roboto;
+        position: relative;
+        left: calc(50% - 2.5rem);
+        margin-top: 2rem;
+        font-size: 1rem;
+        transition: all .3s ease-out;
+      }
+      
+      .sec-btn:hover {
+        cursor: pointer;
+        background-color: rgb(240,240,240);
+        color: rgb(63,56,83);
+      }
+      
+      .green-btn:hover {
+        color: rgb(35,81,89);
+      }
+      
+      .pic4-background {
+        background-image: url(assets/pic-3.jpg);
+        background-size: cover;
+        background-position: top left;
+        background-repeat: no-repeat;
+      }
+      
+      .green-bcg {
+        background-color: rgb(35,81,89);
+        padding: 5rem 0;
+      }
+      
+      @media (max-width: 768px) {
+        .pic4-background, 
+        .pic3-background {
+          display: none;
+        }
+      }
+      
+    </style>
+    
+    <div class="row justify-content-center">
+      <div class="col-5 pic3-background"></div>
+      <div class="col-12 col-md-7 purple-bcg">
+        <div class="row justify-content-start">
+          <div class="col-12">
+            <p class="purple-little-title">ADVANCED FOCUS ON SKIN CARE</p>
+            <p class="purple-title">MAKEUP ARTIST</p>
+            <div class="sec-btn">more</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-5 green-bcg">
+        <div class="row justify-content-end">
+          <div class="col-12">
+            <p class="purple-little-title">II. SEASON READY IN LESS THAN A YEAR</p>
+            <p class="purple-title">NAIL & SKIN CARE</p>
+            <div class="sec-btn green-btn">more</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-7 pic4-background"></div>
+    </div>
+    
+    <style>
+      .laugh-cont {
+        width: 100%;
+        background-image: url(assets/laughing-bcg1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 5rem 0 10rem 0;
+      }
+      
+      .laugh-title {
+        text-align: center;
+        color: rgb(240,240,240);
+        font-family: "great vibes";
+        font-size: 2rem;
+        margin-top: -1.5rem;
+      }
+      
+      .laugh-little-title {
+        color: whitesmoke;
+        font-family: roboto;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+      }
+      
+      .li {
+        font-family: signika;
+        font-size: .85rem;
+        line-height: 1.8rem;
+        color: rgb(195,195,195);
+        list-style: square;
+      }
+      
+      .laugh {
+        stroke-width: .4rem;
+      }
+      
+      .red-line {
+        border-top: .2rem solid rgb(186,52,70);
+      }
+    </style>
+    
+    <div class="laugh-cont">
+    
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-7">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <p class="laugh-title">Our Programs</p>
+            </div>
+            <div class="col-6 mt-4 mb-4">
+              <p class="laugh-little-title">PART-TIME & FULL-TIME CLASSES AVAILABLE</p>
+            </div>
+          </div>
+          <div class="row justify-content-center mb-4">
+            <div class="col-1 red-line"></div>
+          </div>
+          <div class="row mb-4 ml-md-3 mr-md-3">
+            <div class="col-6">
+              <ul>
+                <li class="li">Clinical  Medical Assisting</li>
+                <li class="li">Continuing Education</li>
+                <li class="li">Cosmetology</li>
+                <li class="li">Cosmetology Instructor Training</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="li">Dialysis Technician</li>
+                <li class="li">Esthetics</li>
+                <li class="li">Health Information Management</li>
+                <li class="li">Massage Therapy</li>
+              </ul>
+            </div>
+          </div>
+          <svg class="container-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <line class="container-top laugh" x1="0" x2="20%" y1="0"/>
+            <line class="container-top laugh" x1="80%" x2="100%" y1="0"></line>
+            <line class="container-top-red" x1="80%" x2="70%" y1="0"></line>
+            <line class="container-top-red" x1="20%" x2="30%" y1="0"></line>
+            <line class="container-left laugh" x1="0" y1="0" y2="100%"></line>
+            <line class="container-right laugh" x1="100%" x2="100%" y1="0" y2="100%"/>
+            <line class="container-bottom laugh" x1="0" x2="100%" y1="100%" y2="100%"></line>
+          </svg>
+        </div>
+      </div>
+    
+    </div>
+    
+    <style>
+      .black-bcg {
+        background-color: black;
+        padding: 2rem 0;
+      }
+      
+      .footer-title {
+        font-size: .75rem;
+        font-family: roboto;
+        color: rgb(240,240,240);
+        text-align: center;
+        line-height: .95rem;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .map-background {
+        background-image: url("assets/map.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 5rem 0;
+        width: 100%;
+        height: 10rem;
+      }
+      
+      .col-footer {
+        margin-top: -5rem;
+        padding-top: 3rem;
+        width: 100%;
+      }
+      
+      .third-btn {
+        width: 36%;
+        position: relative;
+        left: 32%;
+      }
+    </style>
+    
+    <div class="row">
+      <div class="col-6 col-md-5">
+        <div class="row justify-content-center">
+          <div class="col-12 black-bcg pl-2 pl-md-0">
+            <p class="footer-title">28 JACKSON BYLD STE 1020 <br> CHICAGO <br> IL 60604-2340</p>
+          </div>
+          <div class="col-12 map-background"></div>
+        </div>
+      </div>
+      <div class="col-6 col-md-7 col-red col-footer">
+              <div class="row justify-content-start pr-5 pl-4 p-md-0">
+                <div class="col-12 col-md-6 pl-4 pr-4 pl-md-5">
+                  <p class="red-title">CONTACT FORM</p>
+                  <form action="" method="post">
+                    <input type="text" class="red-text" placeholder="Your Name">
+                    <input type="text" class="red-text" placeholder="E-mail">
+                    <input type="text" class="red-text" placeholder="Your Message">
+                  </form>
+                  <div class="first-btn third-btn">SEND</div>
+                </div>
+              </div>
+      </div>
+    </div>
+      
+      
+  
+ <!-- Optional JavaScript --> 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+  </body> 
+</html>
