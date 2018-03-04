@@ -14,9 +14,6 @@
     
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <title>Practice page</title> 
-  </head>
-  
-  <body>
         
     <!-- main styles -->
 
@@ -29,19 +26,19 @@
         width: 100%;
       }
       
-      @media (min-width: 420px) {
+      @media (min-width: 527px) {
         html {
           font-size: 13px;
         }
       }
       
-      @media (min-width: 620px) {
+      @media (min-width: 768px) {
         html {
           font-size: 15px;
         }
       }
       
-      @media (min-width: 980px) {
+      @media (min-width: 992px) {
         html {
           font-size: 17.5px;
         }
@@ -50,6 +47,12 @@
       @media (min-width: 1200px) {
         html {
           font-size: 20px;
+        }
+      }
+      
+      @media (min-width: 1440px) {
+        html {
+          font-size: 25px;
         }
       }
     
@@ -66,9 +69,7 @@
       body {
         width: 100%;
       }
-    </style>
-    
-    <style>
+
       header {
         width: 100%;
         padding: 0;
@@ -138,7 +139,7 @@
       
       .main-little-title {
         font-family: roboto;
-        font-size: .7rem;
+        font-size: .85rem;
         padding: 0;
         margin: 0;
         line-height: 1rem;
@@ -157,7 +158,7 @@
       
       .red-text {
         text-align: center;
-        font-size: .65rem;
+        font-size: .85rem;
         font-family: signika;
         color: rgb(210,210,210);
         margin-bottom: .5rem;
@@ -166,12 +167,11 @@
         border: none;
         height: 2rem;
         border-bottom: .05rem solid rgb(240,240,240);
-
       }
       
       input::placeholder {
         text-align: center;
-        font-size: .65rem;
+        font-size: .85rem;
         font-family: signika;
         color: rgb(240,240,240);
       }
@@ -197,7 +197,7 @@
         color: rgb(186,52,70);
         font-family: roboto;
         text-align: center;
-        font-size: .65rem;
+        font-size: .85rem;
         padding-top: .4rem;
         margin: 2rem 0 0 0;
         border-radius: .2rem;
@@ -218,50 +218,6 @@
         cursor: pointer;
       }
       
-      
-    </style>
-    
-    <header>
-        
-      <div class="row row-header justify-content-end pt-3 pb-0 pr-md-5 pr-md-0 m-0">
-        <div class="col-12 col-bcg"></div>      
-      </div>
-      
-      <div class="row row-header-text pt-3 pb-0 p-0 m-0">
-        <div class="col-12 col-md-5">
-          <div class="row justify-content-end mt-4">
-            <div class="col-12 col-md-7 logo-bcg mr-md-3">
-              <div class="logo">
-                <svg class="logo-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                  <line class="logo-top" x1="1rem" y1="0"></line>
-                  <line class="logo-left" x1="0" y1="2rem"></line>
-                  <line class="logo-right" x1="2rem" y1="2rem" x2="2rem" y2="1rem"></line>
-                  <line class="logo-bottom" x1="0" x2="2rem" y1="2rem" y2="2rem"></line>
-                </svg>
-              </div>
-              <p class="main-title">Aphrodite</p>
-              <p class="main-little-title">BEAUTY SCHOOL</p>
-            </div>
-            <div class="col-12 mt-5 m-0 col-red">
-              <div class="row justify-content-end pr-5 pl-5 p-md-0">
-                <div class="col-12 col-md-7 pr-5 pl-5 pl-md-0">
-                  <p class="red-title">WE DO MORE THAN JUST CREATE BEAUTY</p>
-                  <form action="" method="post">
-                    <input type="text" class="red-text" placeholder="Your Name">
-                    <input type="text" class="red-text" placeholder="City or ZIP">
-                    <input type="text" class="red-text" placeholder="E-mail">
-                  </form>
-                  <div class="first-btn">GET STARTED NOW!</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    </header>
-    
-    <style>
       .wrapper-1 {
         width: 100%;
         padding: 7rem 0 3rem 0;
@@ -303,12 +259,25 @@
         left: 35%;
       }
       
+      .s {
+        transform-origin: center center;
+        transform: translateX(-50%);
+      }
+      
+
+      
       .container-straight-title,
       .container-straight-little-title, 
       .container-straight-text,
       .straight-num {
         transform: scaleX(-1);
       }
+      
+      .straight-num {
+        margin: 0;
+      }
+      
+      
       
       .container-little-title {
         color: black;
@@ -321,7 +290,7 @@
       
       .container-text {
         font-family: signika;
-        font-size: .65rem;
+        font-size: .85rem;
         color: rgb(135,135,135);
         line-height: .95rem;
         font-weight: bold;
@@ -343,7 +312,7 @@
         margin: 0;
         padding: 0;
         position: relative;
-        right: -5rem;
+        right: -12vw;
         top: -1.5rem;
         z-index: 5;
         transform: scaleX(-1);
@@ -368,7 +337,7 @@
         border-left: .2rem solid rgb(186,52,70);
         border-bottom: .2rem solid rgb(186,52,70);
         top: 3rem;
-        left: 5rem;
+        left: 12vw;
       }
       
       .num {
@@ -376,16 +345,18 @@
         font-family: roboto;
         font-size: 1.3rem;
         line-height: 1.5rem;
-        left: 2.5rem;
+        left: 1.5rem;
         position: relative;
         font-weight: bold;
+        margin: 0;
+        padding: 0;
       }
       
       .num-mirror {
         color: black;
         font-family: roboto;
         font-size: 1.3rem;
-        margin-left: 2.5rem;
+        margin-left: 1.5rem;
         position: relative;
         font-size: 1.3rem;
         line-height: 1.5rem;
@@ -408,59 +379,6 @@
         transform: scaleX(-1);
       }
 
-    </style>
-    
-    <div class="wrapper-1">
-
-      <div class="row justify-content-center ml-5 row-mirror row-mirror-2 mb-5">
-        <div class="col-5 col-md-3">
-          <img class="img-fluid image-2" alt="" src="assets/pic-1.jpg">
-          <div class="red-border-mirror">
-            <p class="num straight-num">01.</p>
-          </div>
-        </div>
-        <div class="col-7 col-md-5 col-svg">
-          <p class="container-title container-mirror-title container-straight-title">About Us</p>
-          <p class="container-little-title container-mirror container-straight-little-title" style="margin-top: 2.5rem;">SUCCEED IN THE BEAUTY WORLD</p>
-          <p class="container-text pb-2 container-mirror container-straight-text">Autem possit no sit, ius augue aeque admodum et. Summo nobis legimus at eos. Vero mollis iudicabit cum ex, eam id semper accusata. Duo ad integre insolens. Assum delicata definitionem ius cu, labitur salutandi cum te. No nam porro dolorum eligendi, ea modus etiam sea, vel te probo dicunt inciderint.</p>
-          <p class="container-text pb-2 container-mirror container-straight-text">Lorem ipsum dolor sit amet, primis latine urbanitas usu ei. Sed in dolorum intellegam, has ei nobis gubergren expetendis. No ubique facilis vim, congue molestiae euripidis at eam, patrioque splendide pro cu. In vide tantas suavitate sed, ea quo dicat civibus.</p>
-            <svg class="container-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-              <line class="container-top" x1="80%" x2="100%" y1="0"></line>
-              <line class="container-top-red" x1="80%" x2="70%" y1="0"></line>
-              <line class="container-left" x1="0" y1="0" y2="100%"></line>
-              <line class="container-right" x1="100%" y1="100%" x2="100%" y2="0"></line>
-              <line class="container-bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
-            </svg>
-        </div>
-      </div>
-      
-      <div class="row mt-3 mb-3"></div>
-      
-      <div class="row justify-content-center mr-5 row-mirror mb-5">
-        <div class="col-5 col-md-3">
-          <img class="img-fluid image-2" alt="" src="assets/pic-2.jpg">
-          <div class="red-border-mirror">
-            <p class="num-mirror">02.</p>
-          </div>
-        </div>
-        <div class="col-7 col-md-5 col-svg">
-          <p class="container-title container-mirror-title">Useful Info</p>
-          <p class="container-little-title container-mirror" style="margin-top: 2.5rem;">SUCCEED IN THE BEAUTY WORLD</p>
-          <p class="container-text pb-2 container-mirror">Autem possit no sit, ius augue aeque admodum et. Summo nobis legimus at eos. Vero mollis iudicabit cum ex, eam id semper accusata. Duo ad integre insolens. Assum delicata definitionem ius cu, labitur salutandi cum te. No nam porro dolorum eligendi, ea modus etiam sea, vel te probo dicunt inciderint.</p>
-            <svg class="container-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-              <line class="container-top" x1="80%" x2="100%" y1="0"></line>
-              <line class="container-top-red" x1="80%" x2="70%" y1="0"></line>
-              <line class="container-left" x1="0" y1="0" y2="100%"></line>
-              <line class="container-right" x1="100%" y1="100%" x2="100%" y2="0"></line>
-              <line class="container-bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
-            </svg>
-        </div>
-      </div>
-    
-    
-    </div>
-    
-    <style>
       .pic3-background {
         background-image: url(assets/pic-4.jpg);
         background-size: cover;
@@ -538,6 +456,196 @@
         }
       }
       
+      .laugh-cont {
+        width: 100%;
+        background-image: url(assets/laughing-bcg1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 5rem 0 10rem 0;
+      }
+      
+      .laugh-title {
+        text-align: center;
+        color: rgb(240,240,240);
+        font-family: "great vibes";
+        font-size: 2rem;
+        margin-top: -1.5rem;
+      }
+      
+      .laugh-little-title {
+        color: whitesmoke;
+        font-family: roboto;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+      }
+      
+      .li {
+        font-family: signika;
+        font-size: .95rem;
+        line-height: 1.8rem;
+        color: rgb(195,195,195);
+        list-style: none;
+        text-align: center;
+        border-bottom: rgba(195,195,195,.5) solid .025rem;
+        line-height: 1.2;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+      }
+      
+      .laugh {
+        stroke-width: .4rem;
+      }
+      
+      .red-line {
+        border-top: .2rem solid rgb(186,52,70);
+      }
+      
+      .black-bcg {
+        background-color: black;
+        padding: 2rem 0;
+      }
+      
+      .footer-title {
+        font-size: .75rem;
+        font-family: roboto;
+        color: rgb(240,240,240);
+        text-align: center;
+        line-height: .95rem;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .map-background {
+        background-image: url("assets/map.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 5rem 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      
+      .col-footer {
+        margin-top: -5rem;
+        padding-top: 3rem;
+        width: 100%;
+        padding-bottom: 0;          
+      }
+      
+      .third-btn {
+        width: 36%;
+        position: relative;
+        left: 32%;
+      }
+      
+      .row {
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    
+    <header>
+        
+      <div class="row row-header justify-content-end pt-3 pb-0 pr-md-5 pr-md-0 m-0 p-0">
+        <div class="col-12 col-bcg p-0"></div>      
+      </div>
+      
+      <div class="row row-header-text pt-3 pb-0 p-0 m-0">
+        <div class="col-12 col-md-5 p-0">
+          <div class="row justify-content-end mt-4">
+            <div class="col-12 col-md-7 logo-bcg mr-md-3">
+              <div class="logo">
+                <svg class="logo-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                  <line class="logo-top" x1="1rem" y1="0"></line>
+                  <line class="logo-left" x1="0" y1="2rem"></line>
+                  <line class="logo-right" x1="2rem" y1="2rem" x2="2rem" y2="1rem"></line>
+                  <line class="logo-bottom" x1="0" x2="2rem" y1="2rem" y2="2rem"></line>
+                </svg>
+              </div>
+              <p class="main-title">Aphrodite</p>
+              <p class="main-little-title">BEAUTY SCHOOL</p>
+            </div>
+            <div class="col-12 mt-5 m-0 col-red">
+              <div class="row justify-content-end pr-5 pl-5 p-md-0">
+                <div class="col-12 col-md-7 pr-5 pl-5 pl-md-0">
+                  <p class="red-title">WE DO MORE THAN JUST CREATE BEAUTY</p>
+                  <form action="" method="post">
+                    <input type="text" class="red-text" placeholder="Your Name">
+                    <input type="text" class="red-text" placeholder="City or ZIP">
+                    <input type="text" class="red-text" placeholder="E-mail">
+                  </form>
+                  <div class="first-btn">GET STARTED NOW!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </header>
+    
+    <style>
+
+    </style>
+    
+    <div class="wrapper-1">
+
+      <div class="row justify-content-center ml-5 row-mirror row-mirror-2 mb-5">
+        <div class="col-5 col-md-3">
+          <img class="img-fluid image-2" alt="" src="assets/pic-1.jpg">
+          <div class="red-border-mirror">
+            <p class="num straight-num">01.</p>
+          </div>
+        </div>
+        <div class="col-7 col-md-5 col-svg">
+          <p class="container-title container-mirror-title container-straight-title">About Us</p>
+          <p class="container-little-title container-mirror container-straight-little-title" style="margin-top: 2.5rem;">SUCCEED IN THE BEAUTY WORLD</p>
+          <p class="container-text pb-2 container-mirror container-straight-text">Autem possit no sit, ius augue aeque admodum et. Summo nobis legimus at eos. Vero mollis iudicabit cum ex, eam id semper accusata. Duo ad integre insolens. Assum delicata definitionem ius cu, labitur salutandi cum te. No nam porro dolorum eligendi, ea modus etiam sea, vel te probo dicunt inciderint.</p>
+          <p class="container-text pb-2 container-mirror container-straight-text">Lorem ipsum dolor sit amet, primis latine urbanitas usu ei. Sed in dolorum intellegam, has ei nobis gubergren expetendis. No ubique facilis vim, congue molestiae euripidis at eam, patrioque splendide pro cu. In vide tantas suavitate sed, ea quo dicat civibus.</p>
+            <svg class="container-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="container-top" x1="80%" x2="100%" y1="0"></line>
+              <line class="container-top-red" x1="80%" x2="70%" y1="0"></line>
+              <line class="container-left" x1="0" y1="0" y2="100%"></line>
+              <line class="container-right" x1="100%" y1="100%" x2="100%" y2="0"></line>
+              <line class="container-bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+            </svg>
+        </div>
+      </div>
+      
+      <div class="row mt-3 mb-3"></div>
+      
+      <div class="row justify-content-center mr-5 row-mirror mb-5">
+        <div class="col-5 col-md-3">
+          <img class="img-fluid image-2" alt="" src="assets/pic-2.jpg">
+          <div class="red-border-mirror">
+            <p class="num-mirror">02.</p>
+          </div>
+        </div>
+        <div class="col-7 col-md-5 col-svg">
+          <p class="container-title container-mirror-title">Useful Info</p>
+          <p class="container-little-title container-mirror" style="margin-top: 2.5rem;">SUCCEED IN THE BEAUTY WORLD</p>
+          <p class="container-text pb-2 container-mirror">Autem possit no sit, ius augue aeque admodum et. Summo nobis legimus at eos. Vero mollis iudicabit cum ex, eam id semper accusata. Duo ad integre insolens. Assum delicata definitionem ius cu, labitur salutandi cum te. No nam porro dolorum eligendi, ea modus etiam sea, vel te probo dicunt inciderint.</p>
+            <svg class="container-border" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="container-top" x1="80%" x2="100%" y1="0"></line>
+              <line class="container-top-red" x1="80%" x2="70%" y1="0"></line>
+              <line class="container-left" x1="0" y1="0" y2="100%"></line>
+              <line class="container-right" x1="100%" y1="100%" x2="100%" y2="0"></line>
+              <line class="container-bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+            </svg>
+        </div>
+      </div>
+    
+    
+    </div>
+    
+
     </style>
     
     <div class="row justify-content-center">
@@ -567,53 +675,14 @@
     </div>
     
     <style>
-      .laugh-cont {
-        width: 100%;
-        background-image: url(assets/laughing-bcg1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top center;
-        padding: 5rem 0 10rem 0;
-      }
-      
-      .laugh-title {
-        text-align: center;
-        color: rgb(240,240,240);
-        font-family: "great vibes";
-        font-size: 2rem;
-        margin-top: -1.5rem;
-      }
-      
-      .laugh-little-title {
-        color: whitesmoke;
-        font-family: roboto;
-        text-align: center;
-        font-size: 1.5rem;
-        line-height: 1.7rem;
-      }
-      
-      .li {
-        font-family: signika;
-        font-size: .85rem;
-        line-height: 1.8rem;
-        color: rgb(195,195,195);
-        list-style: square;
-      }
-      
-      .laugh {
-        stroke-width: .4rem;
-      }
-      
-      .red-line {
-        border-top: .2rem solid rgb(186,52,70);
-      }
+
     </style>
     
     <div class="laugh-cont">
     
       <div class="row justify-content-center">
-        <div class="col-10 col-md-7">
-          <div class="row justify-content-center">
+        <div class="col-10 col-md-7 p-0">
+          <div class="row justify-content-center mr-0">
             <div class="col-12">
               <p class="laugh-title">Our Programs</p>
             </div>
@@ -624,17 +693,17 @@
           <div class="row justify-content-center mb-4">
             <div class="col-1 red-line"></div>
           </div>
-          <div class="row mb-4 ml-md-3 mr-md-3">
-            <div class="col-6">
-              <ul>
+          <div class="row justify-content-center pl-md-3 pr-md-3 mb-4 ml-md-3 mr-md-3">
+            <div class="col-6 m-0 pr-md-3">
+              <ul style="padding-left: 0;">
                 <li class="li">Clinical  Medical Assisting</li>
                 <li class="li">Continuing Education</li>
                 <li class="li">Cosmetology</li>
                 <li class="li">Cosmetology Instructor Training</li>
               </ul>
             </div>
-            <div class="col-6">
-              <ul>
+            <div class="col-6 pl-md-3">
+              <ul style="padding-left: 0;">
                 <li class="li">Dialysis Technician</li>
                 <li class="li">Esthetics</li>
                 <li class="li">Health Information Management</li>
@@ -657,46 +726,11 @@
     </div>
     
     <style>
-      .black-bcg {
-        background-color: black;
-        padding: 2rem 0;
-      }
-      
-      .footer-title {
-        font-size: .75rem;
-        font-family: roboto;
-        color: rgb(240,240,240);
-        text-align: center;
-        line-height: .95rem;
-        margin: 0;
-        padding: 0;
-      }
-      
-      .map-background {
-        background-image: url("assets/map.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        padding: 5rem 0;
-        width: 100%;
-        height: 10rem;
-      }
-      
-      .col-footer {
-        margin-top: -5rem;
-        padding-top: 3rem;
-        width: 100%;
-      }
-      
-      .third-btn {
-        width: 36%;
-        position: relative;
-        left: 32%;
-      }
+
     </style>
     
-    <div class="row">
-      <div class="col-6 col-md-5">
+    <div class="row m-0 p-0 justify-content-start">
+      <div class="col-6 col-md-5 p-0 ">
         <div class="row justify-content-center">
           <div class="col-12 black-bcg pl-2 pl-md-0">
             <p class="footer-title">28 JACKSON BYLD STE 1020 <br> CHICAGO <br> IL 60604-2340</p>
@@ -705,17 +739,17 @@
         </div>
       </div>
       <div class="col-6 col-md-7 col-red col-footer">
-              <div class="row justify-content-start pr-5 pl-4 p-md-0">
-                <div class="col-12 col-md-6 pl-4 pr-4 pl-md-5">
-                  <p class="red-title">CONTACT FORM</p>
-                  <form action="" method="post">
-                    <input type="text" class="red-text" placeholder="Your Name">
-                    <input type="text" class="red-text" placeholder="E-mail">
-                    <input type="text" class="red-text" placeholder="Your Message">
-                  </form>
-                  <div class="first-btn third-btn">SEND</div>
-                </div>
-              </div>
+        <div class="row justify-content-start pr-5 pl-4 p-md-0">
+          <div class="col-12 col-md-6 pl-4 pr-4 pl-md-5">
+            <p class="red-title">CONTACT FORM</p>
+            <form action="" method="post">
+              <input type="text" class="red-text" placeholder="Your Name">
+              <input type="text" class="red-text" placeholder="E-mail">
+              <input type="text" class="red-text" placeholder="Your Message">
+            </form>
+            <div class="first-btn third-btn">SEND</div>
+          </div>
+        </div>
       </div>
     </div>
       
