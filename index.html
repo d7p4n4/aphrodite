@@ -427,6 +427,13 @@
         transition: all .3s ease-out;
       }
       
+      @media (max-width: 768px) {
+        .sec-btn {
+          width: 10rem;
+          left: calc(50% - 5rem);
+        }
+      }
+      
       .sec-btn:hover {
         cursor: pointer;
         background-color: rgb(240,240,240);
@@ -535,10 +542,34 @@
         padding-bottom: 0;          
       }
       
+      @media (min-width: 768px) {
+        .col-footer {
+          position: relative;
+          left: 100%;
+          transform: translateX(-100%);
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .col-footer-2 {
+          position: relative;
+          right: 100%;
+          transform: translateX(100%);
+        }
+      }
+      
       .third-btn {
         width: 36%;
         position: relative;
         left: 32%;
+      }
+      
+      @media (max-width: 768px) {
+        .third-btn {
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
       
       .about-text-wrap {
@@ -742,16 +773,8 @@
     </style>
     
     <div class="row m-0 p-0 justify-content-start">
-      <div class="col-6 col-md-5 p-0 ">
-        <div class="row justify-content-center">
-          <div class="col-12 black-bcg pl-2 pl-md-0">
-            <p class="footer-title">28 JACKSON BYLD STE 1020 <br> CHICAGO <br> IL 60604-2340</p>
-          </div>
-          <div class="col-12 map-background"></div>
-        </div>
-      </div>
-      <div class="col-6 col-md-7 col-red col-footer">
-        <div class="row justify-content-start pr-5 pl-4 p-md-0">
+      <div class="col-12 col-md-7 col-red col-footer">
+        <div class="row justify-content-start pr-4 pl-4 p-md-0">
           <div class="col-12 col-md-6 pl-4 pr-4 pl-md-5">
             <p class="red-title">CONTACT FORM</p>
             <form action="" method="post">
@@ -759,8 +782,16 @@
               <input type="text" class="red-text" placeholder="E-mail">
               <input type="text" class="red-text" placeholder="Your Message">
             </form>
-            <div class="first-btn third-btn">SEND</div>
+            <div class="first-btn third-btn mb-5 mb-md-0">SEND</div>
           </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-5 p-0 col-footer-2">
+        <div class="row justify-content-center">
+          <div class="col-12 black-bcg pl-2 pl-md-0">
+            <p class="footer-title">28 JACKSON BYLD STE 1020 <br> CHICAGO <br> IL 60604-2340</p>
+          </div>
+          <div class="col-12 map-background"></div>
         </div>
       </div>
     </div>
